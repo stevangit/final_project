@@ -50,6 +50,7 @@ public class ProfilePage extends BasicPage {
 	}
 	
 	public WebElement getSubmitBtn() {
+//		this.waiter.until(ExpectedConditions.elementToBeClickable(By.name("btn_submit")));
 		return this.driver.findElement(By.name("btn_submit"));
 	}
 	
@@ -63,15 +64,20 @@ public class ProfilePage extends BasicPage {
 	}
 	
 	public void changeAllProfileInputs(String name, String lastname, String address, String zip, String phone, String country, String state, String city) {
+		this.getSettingFirstName().clear();
 		this.getSettingFirstName().sendKeys(name);
+		this.getSettingLastName().clear();
 		this.getSettingLastName().sendKeys(lastname);
+		this.getSettingAddress().clear();
 		this.getSettingAddress().sendKeys(address);
+		this.getSettingZip().clear();
 		this.getSettingZip().sendKeys(zip);
+		this.getSettingPhone().clear();
 		this.getSettingPhone().sendKeys(phone);
 		this.selectCountry(country);
 		this.selectState(state);
 		this.selectCity(city);
-		this.getSubmitBtn();
+		js.executeScript("arguments[0].click();", this.getSubmitBtn());
 	}
 	
 	

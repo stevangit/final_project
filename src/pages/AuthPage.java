@@ -13,16 +13,17 @@ public class AuthPage extends BasicPage {
 	}
 	
 	public WebElement getAccountDropDown() {
-		return this.driver.findElement(By.className("accounts-link accounts-popup"));
+		return this.driver.findElement(By.xpath("//div[@class='accounts-link accounts-popup']"));
 	}
 	
 	public WebElement getLogout() {
+		if (getAccountDropDown().isSelected()) {
+		} else {
+			getAccountDropDown().click();
+		}
 		return this.driver.findElement(By.linkText("Logout"));
 	}
 	
-	public WebElement getProfileDetails() {
-		return this.driver.findElement(By.xpath("//a[@href='/member/profile']"));
-	}
 	
 	
 }

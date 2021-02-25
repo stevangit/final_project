@@ -13,7 +13,7 @@ public class LoginPage extends BasicPage {
 	}
 	
 	public WebElement getLoginPage() {
-		return this.driver.findElement(By.xpath("//*[@id='header']/div[2]/div/div[2]/div[2]/ul/li[2]/a"));
+		return this.driver.findElement(By.xpath("//*[@href='/guest-user/login-form']"));
 	}
 	
 	public WebElement getEmailField() {
@@ -29,7 +29,9 @@ public class LoginPage extends BasicPage {
 	}
 	
 	public void logIn(String email, String pass) {
+		this.getEmailField().clear();
 		this.getEmailField().sendKeys(email);
+		this.getPasswordField().clear();
 		this.getPasswordField().sendKeys(pass);
 		this.getLoginBtn().click();
 	}

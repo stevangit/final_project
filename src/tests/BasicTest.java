@@ -18,6 +18,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.asserts.SoftAssert;
 
 import pages.LocationPopUpPage;
 import pages.LoginPage;
@@ -32,6 +33,7 @@ public abstract class BasicTest {
 	protected WebDriver driver;
 	protected WebDriverWait waiter;
 	protected JavascriptExecutor js;
+	protected SoftAssert sa = new SoftAssert();
 	protected LoginPage loginPage;
 	protected LocationPopUpPage loginPopUpPage;
 	protected AuthPage authPage;
@@ -43,14 +45,15 @@ public abstract class BasicTest {
 	protected String user = "customer@dummyid.com";
 	protected String password = "12345678a";
 	
+	
 	@BeforeClass
 	public void setup() {
 		System.setProperty("webdriver.chrome.driver", "driver_lib\\chromedriver.exe");
 		this.driver = new ChromeDriver();
-		this.waiter = new WebDriverWait(driver, 10);
+		this.waiter = new WebDriverWait(driver, 15);
 		this.driver.manage().window().maximize();
-		this.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
-		this.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().pageLoadTimeout(12, TimeUnit.SECONDS);
+		this.driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
 		this.loginPage = new LoginPage(driver, waiter, js);
 		this.loginPopUpPage = new LocationPopUpPage(driver, waiter, js);
 		this.authPage = new AuthPage(driver, waiter, js);
@@ -63,10 +66,10 @@ public abstract class BasicTest {
 	@AfterMethod
 	public void after(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.FAILURE) {
-			DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy h-m-s");
+			DateFormat dateFormat = new SimpleDateFormat("d-M-y h-m-s");
 			Date date = new Date();
 			File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			File destFile = new File("screenshot\\" + dateFormat.format(date) + ".img");
+			File destFile = new File("screenshot\\" + dateFormat.format(date) + ".png");
 			Files.copy(srcFile.toPath(), destFile.toPath());
 			}
 		this.driver.manage().deleteAllCookies();

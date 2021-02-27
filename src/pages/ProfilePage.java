@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -55,11 +56,16 @@ public class ProfilePage extends BasicPage {
 	}
 	
 	public void uploadPicture(String picturePath) {
-		js.executeScript("arguments[0].click();", this.driver.findElement(By.className("upload uploadFile-Js")));
-		this.driver.findElement(By.className("upload uploadFile-Js")).sendKeys(picturePath);
+		Actions action = new Actions(driver);
+		action.moveToElement(this.driver.findElement(By.xpath("//div[@class='avatar']"))).click().build().perform();
+
+		js.executeScript("arguments[0].click();", this.driver.findElement(By.xpath("//a[@class='upload uploadFile-Js']")));
+//		this.driver.findElement(By.xpath("//a[@class='upload uploadFile-Js']")).click();
+		this.driver.findElement(By.xpath("//input[@type='file']")).sendKeys(picturePath);
 	}
 	
 	public void removePicture() {
+		js.executeScript("arguments[0].click();", this.driver.findElement(By.xpath("//div[@class='avatar']")));
 		js.executeScript("arguments[0].click();", this.driver.findElement(By.className("remove")));
 	}
 	

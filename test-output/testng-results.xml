@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19558" started-at="2021-02-25T22:54:46 CET" finished-at="2021-02-25T22:55:06 CET">
+  <suite name="Default suite" duration-ms="30845" started-at="2021-02-28T00:40:14 CET" finished-at="2021-02-28T00:40:45 CET">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19558" started-at="2021-02-25T22:54:46 CET" finished-at="2021-02-25T22:55:06 CET">
+    <test name="Default test" duration-ms="30845" started-at="2021-02-28T00:40:14 CET" finished-at="2021-02-28T00:40:45 CET">
       <class name="tests.ProfileTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.ProfileTest@131276c2]" name="setup" is-config="true" duration-ms="3739" started-at="2021-02-25T22:54:46 CET" finished-at="2021-02-25T22:54:50 CET">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.ProfileTest@23faf8f2]" name="setup" is-config="true" duration-ms="3805" started-at="2021-02-28T00:40:14 CET" finished-at="2021-02-28T00:40:18 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="editProfileTest()[pri:0, instance:tests.ProfileTest@131276c2]" name="editProfileTest" duration-ms="15511" started-at="2021-02-25T22:54:50 CET" finished-at="2021-02-25T22:55:06 CET">
+        <test-method status="PASS" signature="changeProfileImageTest()[pri:1, instance:tests.ProfileTest@23faf8f2]" name="changeProfileImageTest" duration-ms="26780" started-at="2021-02-28T00:40:18 CET" finished-at="2021-02-28T00:40:44 CET">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editProfileTest -->
-        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ProfileTest@131276c2]" name="after" is-config="true" duration-ms="62" started-at="2021-02-25T22:55:06 CET" finished-at="2021-02-25T22:55:06 CET">
+        </test-method> <!-- changeProfileImageTest -->
+        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ProfileTest@23faf8f2]" name="after" is-config="true" duration-ms="70" started-at="2021-02-28T00:40:44 CET" finished-at="2021-02-28T00:40:44 CET">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=editProfileTest status=SUCCESS method=ProfileTest.editProfileTest()[pri:0, instance:tests.ProfileTest@131276c2] output={null}]]]>
+                <![CDATA[[TestResult name=changeProfileImageTest status=SUCCESS method=ProfileTest.changeProfileImageTest()[pri:1, instance:tests.ProfileTest@23faf8f2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-        <test-method status="PASS" signature="clean()[pri:0, instance:tests.ProfileTest@131276c2]" name="clean" is-config="true" duration-ms="214" started-at="2021-02-25T22:55:06 CET" finished-at="2021-02-25T22:55:06 CET">
+        <test-method status="PASS" signature="clean()[pri:0, instance:tests.ProfileTest@23faf8f2]" name="clean" is-config="true" duration-ms="132" started-at="2021-02-28T00:40:44 CET" finished-at="2021-02-28T00:40:45 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clean -->

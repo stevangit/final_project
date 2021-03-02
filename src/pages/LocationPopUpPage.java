@@ -13,7 +13,7 @@ public class LocationPopUpPage extends BasicPage {
 	}
 
 	public WebElement getHeaderLocation() {
-		return this.driver.findElement(By.className("location-selector"));
+		return this.driver.findElement(By.xpath("//div[@class='location-selector']"));
 	}
 
 	public WebElement getLocationCloseBtn() {

@@ -1,32 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30845" started-at="2021-02-28T00:40:14 CET" finished-at="2021-02-28T00:40:45 CET">
+  <suite name="Default suite" duration-ms="75441" started-at="2021-03-02T19:27:57 CET" finished-at="2021-03-02T19:29:12 CET">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30845" started-at="2021-02-28T00:40:14 CET" finished-at="2021-02-28T00:40:45 CET">
+    <test name="Default test" duration-ms="75441" started-at="2021-03-02T19:27:57 CET" finished-at="2021-03-02T19:29:12 CET">
       <class name="tests.ProfileTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.ProfileTest@23faf8f2]" name="setup" is-config="true" duration-ms="3805" started-at="2021-02-28T00:40:14 CET" finished-at="2021-02-28T00:40:18 CET">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.ProfileTest@23faf8f2]" name="setup" is-config="true" duration-ms="3594" started-at="2021-03-02T19:27:57 CET" finished-at="2021-03-02T19:28:01 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="changeProfileImageTest()[pri:1, instance:tests.ProfileTest@23faf8f2]" name="changeProfileImageTest" duration-ms="26780" started-at="2021-02-28T00:40:18 CET" finished-at="2021-02-28T00:40:44 CET">
+        <test-method status="PASS" signature="editProfile()[pri:0, instance:tests.ProfileTest@23faf8f2]" name="editProfile" duration-ms="13547" started-at="2021-03-02T19:28:01 CET" finished-at="2021-03-02T19:28:14 CET">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- changeProfileImageTest -->
-        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ProfileTest@23faf8f2]" name="after" is-config="true" duration-ms="70" started-at="2021-02-28T00:40:44 CET" finished-at="2021-02-28T00:40:44 CET">
+        </test-method> <!-- editProfile -->
+        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ProfileTest@23faf8f2]" name="after" is-config="true" duration-ms="82" started-at="2021-03-02T19:28:14 CET" finished-at="2021-03-02T19:28:14 CET">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=changeProfileImageTest status=SUCCESS method=ProfileTest.changeProfileImageTest()[pri:1, instance:tests.ProfileTest@23faf8f2] output={null}]]]>
+                <![CDATA[[TestResult name=editProfile status=SUCCESS method=ProfileTest.editProfile()[pri:0, instance:tests.ProfileTest@23faf8f2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-        <test-method status="PASS" signature="clean()[pri:0, instance:tests.ProfileTest@23faf8f2]" name="clean" is-config="true" duration-ms="132" started-at="2021-02-28T00:40:44 CET" finished-at="2021-02-28T00:40:45 CET">
+        <test-method status="PASS" signature="changeProfileImage()[pri:1, instance:tests.ProfileTest@23faf8f2]" name="changeProfileImage" duration-ms="16029" started-at="2021-03-02T19:28:14 CET" finished-at="2021-03-02T19:28:30 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changeProfileImage -->
+        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ProfileTest@23faf8f2]" name="after" is-config="true" duration-ms="88" started-at="2021-03-02T19:28:30 CET" finished-at="2021-03-02T19:28:30 CET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=changeProfileImage status=SUCCESS method=ProfileTest.changeProfileImage()[pri:1, instance:tests.ProfileTest@23faf8f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="addMealToCart()[pri:2, instance:tests.ProfileTest@23faf8f2]" name="addMealToCart" duration-ms="13215" started-at="2021-03-02T19:28:30 CET" finished-at="2021-03-02T19:28:43 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addMealToCart -->
+        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ProfileTest@23faf8f2]" name="after" is-config="true" duration-ms="56" started-at="2021-03-02T19:28:44 CET" finished-at="2021-03-02T19:28:44 CET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addMealToCart status=SUCCESS method=ProfileTest.addMealToCart()[pri:2, instance:tests.ProfileTest@23faf8f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="addMealToFavorite()[pri:3, instance:tests.ProfileTest@23faf8f2]" name="addMealToFavorite" duration-ms="8780" started-at="2021-03-02T19:28:44 CET" finished-at="2021-03-02T19:28:52 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addMealToFavorite -->
+        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ProfileTest@23faf8f2]" name="after" is-config="true" duration-ms="88" started-at="2021-03-02T19:28:52 CET" finished-at="2021-03-02T19:28:52 CET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addMealToFavorite status=SUCCESS method=ProfileTest.addMealToFavorite()[pri:3, instance:tests.ProfileTest@23faf8f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="clearCart()[pri:4, instance:tests.ProfileTest@23faf8f2]" name="clearCart" duration-ms="19683" started-at="2021-03-02T19:28:52 CET" finished-at="2021-03-02T19:29:12 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCart -->
+        <test-method status="PASS" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ProfileTest@23faf8f2]" name="after" is-config="true" duration-ms="71" started-at="2021-03-02T19:29:12 CET" finished-at="2021-03-02T19:29:12 CET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clearCart status=SUCCESS method=ProfileTest.clearCart()[pri:4, instance:tests.ProfileTest@23faf8f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="clean()[pri:0, instance:tests.ProfileTest@23faf8f2]" name="clean" is-config="true" duration-ms="138" started-at="2021-03-02T19:29:12 CET" finished-at="2021-03-02T19:29:12 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clean -->

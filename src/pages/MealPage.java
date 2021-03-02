@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -14,7 +15,7 @@ public class MealPage extends BasicPage {
 	}
 	
 	public WebElement getMealSearchBar() {
-		return this.driver.findElement(By.name("keywords"));
+		return this.driver.findElement(By.xpath("//input[@placeholder='Search Your Favourite Meals']"));
 	}
 	
 	public void selectSorting(String sortOption) {
@@ -29,23 +30,18 @@ public class MealPage extends BasicPage {
 		return this.driver.findElement(By.className("next"));
 	}
 	
-	public WebElement getMealWithNumber(String numberMeal) {
-		//numberMeal from 1-24
-		return this.driver.findElement(By.xpath("//*[@id=\"listing\"]/div[" + numberMeal + "]/div"));
+	public WebElement getAddToCart() {
+		return this.driver.findElement(By.linkText("Add To Cart"));
 	}								
 	
-	public void addMeal(int amount, String numberMeal) {
-		this.getMealWithNumber(numberMeal).click();
-		for (int i = 0; i < amount; i++) {
-			this.driver.findElement(By.linkText("Add To Cart"));
-		}
+	public void addMeal(Integer amount) {
+		this.driver.findElement(By.name("product_qty")).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+		this.driver.findElement(By.name("product_qty")).sendKeys(Keys.chord(Keys.DELETE));
+		this.driver.findElement(By.name("product_qty")).sendKeys(amount.toString());
+		this.getAddToCart().click();
 	}
 	
 	public WebElement addToFavorite() {
-		return this.driver.findElement(By.className("favourite itemfav link"));
+		return this.driver.findElement(By.xpath("//a[@title='Favorite']"));
 	}
-	
-		
-	
-	
 }

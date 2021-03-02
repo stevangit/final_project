@@ -13,7 +13,7 @@ public class CartSummaryPage extends BasicPage {
 	}
 	
 	public WebElement getClearAllBtn() {
-		return this.driver.findElement(By.linkText("Clear All"));
+		return this.driver.findElement(By.xpath("//a[@onclick='clearCartItems()']"));
 	}
 	
 	public void clearShoppingCart() {

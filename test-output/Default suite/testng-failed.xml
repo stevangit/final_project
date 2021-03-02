@@ -5,8 +5,8 @@
     <classes>
       <class name="tests.ProfileTest">
         <methods>
+          <include name="addMealToCart"/>
           <include name="after"/>
-          <include name="changeProfileImageTest"/>
           <include name="setup"/>
           <include name="clean"/>
         </methods>

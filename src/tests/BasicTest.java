@@ -35,7 +35,7 @@ public abstract class BasicTest {
 	protected JavascriptExecutor js;
 	protected SoftAssert sa = new SoftAssert();
 	protected LoginPage loginPage;
-	protected LocationPopUpPage loginPopUpPage;
+	protected LocationPopUpPage locationPopUpPage;
 	protected AuthPage authPage;
 	protected CartSummaryPage cartSummaryPage;
 	protected MealPage mealPage;
@@ -55,7 +55,7 @@ public abstract class BasicTest {
 		this.driver.manage().timeouts().pageLoadTimeout(12, TimeUnit.SECONDS);
 		this.driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
 		this.loginPage = new LoginPage(driver, waiter, js);
-		this.loginPopUpPage = new LocationPopUpPage(driver, waiter, js);
+		this.locationPopUpPage = new LocationPopUpPage(driver, waiter, js);
 		this.authPage = new AuthPage(driver, waiter, js);
 		this.cartSummaryPage = new CartSummaryPage(driver, waiter, js);
 		this.mealPage = new MealPage(driver, waiter, js);
